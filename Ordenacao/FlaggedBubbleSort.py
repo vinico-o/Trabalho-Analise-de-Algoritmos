@@ -1,4 +1,4 @@
-def bubble_sort(lista):
+def FlaggedBubbleSort(lista):
     n = len(lista)
     
     for i in range(n):
