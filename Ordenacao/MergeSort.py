@@ -1,3 +1,7 @@
+def MergeSort(lista):
+    n = len(lista) - 1
+    ordenarVetor_merge(lista, 0, n)
+
 def ordenarVetor_merge(lista, inicio, fim):
     if inicio < fim:
         meio = (inicio + fim) // 2
