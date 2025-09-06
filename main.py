@@ -3,12 +3,18 @@ import random
 import time
 
 #Módulo dos Algoritmos
-import Ordenacao.BubbleSort
-import Ordenacao.FlaggedBubbleSort
-import Ordenacao.InsertionSort
-import Ordenacao.MergeSort
-import Ordenacao.SelectionSort
+import Ordenacao.BubbleSort as bs
+import Ordenacao.FlaggedBubbleSort as fbs
+import Ordenacao.InsertionSort as ins
+import Ordenacao.MergeSort as ms
+import Ordenacao.SelectionSort as ss
 
-lista = random.sample(range(1, 101), 50)
+lista = random.sample(range(1, 10001), 10000)
+print(lista)
 
-BubbleSort(lista)
+inicio = time.time()
+ms.MergeSort(lista)
+fim = time.time()
+print(f"{fim - inicio}")
+
+print(lista)
