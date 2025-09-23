@@ -1,5 +1,3 @@
-import numpy as np
-
 def particao_primeiro(vetor, inicio, fim):
     
     pivo = vetor[inicio]  
@@ -28,7 +26,10 @@ def quickSort_primeiro(lista, inicio, fim):
         quickSort_primeiro(lista, inicio, p - 1)  
         quickSort_primeiro(lista, p + 1, fim)    
 
-
+def QuickSortPrimeiro(lista):
+    inicio = 0
+    fim = len(lista) - 1
+    quickSort_primeiro(lista, inicio, fim);
 
 def particao_central(lista, inicio, fim):
 
@@ -59,4 +60,7 @@ def quickSort_central(lista, inicio, fim):
         quickSort_central(lista, inicio, p - 1) 
         quickSort_central(lista, p + 1, fim)    
 
-
+def QuickSortCentral(lista):
+    inicio = 0
+    fim = len(lista) - 1
+    quickSort_central(lista, inicio, fim);
