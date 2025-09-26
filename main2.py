@@ -1,6 +1,9 @@
 import Utils.execucao as execucao
 import Utils.graficos as graficos
 import Utils.registro as registro
+import sys
+# aumenta o numero de chamadas recursivas para 3000
+sys.setrecursionlimit(200000)
 
 # Cria o arquivo Algorithms.csv com o header
 registro.criarArquivo();
@@ -8,4 +11,12 @@ registro.criarArquivo();
 # Gera a lista e Escreve as informacoes no CSV
 execucao.ordenacao();
 
+graficos.plotarGrafico("BubbleSort", "BubbleSort");
+graficos.plotarGrafico("FlaggedBubbleSort", "FlaggedBubbleSort");
+graficos.plotarGrafico("HeapSort", "HeapSort");
+graficos.plotarGrafico("InsertionSort", "InsertionSort");
+graficos.plotarGrafico("MergeSort", "MergeSort");
 graficos.plotarGrafico("QuickSortCentral", "QuickSortCentral");
+graficos.plotarGrafico("QuickSortPrimeiro", "QuickSortPrimeiro");
+graficos.plotarGrafico("SelectionSort", "SelectionSort");
+graficos.plotarGrafico("ShellSort", "ShellSort");

@@ -10,18 +10,18 @@ import Utils.registro as reg
 import time
 import random
 
-tamanhos = [1000, 2000, 3000, 4000, 5000, 6000, 7000, 8000, 9000, 10000, 20000, 30000, 40000, 50000]
+tamanhos = [100, 163, 268, 439, 719, 1178, 1930, 3162, 5179, 8483, 13894, 22758, 37275, 61054, 100000]
 tipos = ["Crescente", "Decrescente", "Aleatorio"]
 funcoes = {
-    #"BubbleSort": bs.BubbleSort,
-    # "FlaggedBubbleSort": fbs.FlaggedBubbleSort,
-    # "HeapSort": hps.HeapSort,
-    # "InsertionSort": ins.InsertionSort,
-    # "MergeSort": ms.MergeSort,
+    "BubbleSort": bs.BubbleSort,
+    "FlaggedBubbleSort": fbs.FlaggedBubbleSort,
+    "HeapSort": hps.HeapSort,
+    "InsertionSort": ins.InsertionSort,
+    "MergeSort": ms.MergeSort,
     "QuickSortCentral": qs.QuickSortCentral,
-    # "QuickSortPrimeiro": qs.QuickSortPrimeiro,
-    # "SelectionSort": ses.selection_sort,
-    # "ShellSort": shs.ShellSort
+    "QuickSortPrimeiro": qs.QuickSortPrimeiro,
+    "SelectionSort": ses.selection_sort,
+    "ShellSort": shs.ShellSort
 }
 
 def ordenacao():
