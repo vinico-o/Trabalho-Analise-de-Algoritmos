@@ -7,19 +7,6 @@ import Utils.graficos as grafico
 sys.setrecursionlimit(200000)
 
 
-
-""" graficos.plotarGrafico("BubbleSort", "BubbleSort")
-graficos.plotarGrafico("FlaggedBubbleSort", "FlaggedBubbleSort")
-graficos.plotarGrafico("HeapSort", "HeapSort")
-graficos.plotarGrafico("InsertionSort", "InsertionSort")
-graficos.plotarGrafico("MergeSort", "MergeSort")
-graficos.plotarGrafico("QuickSortCentral", "QuickSortCentral")
-graficos.plotarGrafico("QuickSortPrimeiro", "QuickSortPrimeiro")
-graficos.plotarGrafico("SelectionSort", "SelectionSort")
-graficos.plotarGrafico("ShellSort", "ShellSort");  """
-
-
-
 def lerArquivo_ou_ordenar():
     i = int(input("\nDeseja ler o arquivo Algorithms.csv ou fazer a ordenação (0 - LER || 1 - ORDENAR): "))
     return i
