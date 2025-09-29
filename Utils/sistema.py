@@ -67,6 +67,4 @@ def menu():
         menu()
     
     else:
-        print ("Índice inválido ou fim da execução(10)")
-
-
+        print ("Índice inválido ou fim da execução(11)")
