@@ -34,7 +34,7 @@ def plotarGrafico_algoritmoEspecifico(algoritmo, titulo):
 
     cores = {"Aleatorio": "red", "Crescente": "green", "Decrescente": "blue"}
     
-    plt.figure(figsize=(5, 4))
+    plt.figure(figsize=(10, 6))
     for tipo, df_tipo in dados.items():
         plt.plot(df_tipo["Tamanho"], df_tipo["Tempo"], color=cores[tipo], label=f"{algoritmo} {tipo}")
     
@@ -61,13 +61,14 @@ def plotarGrafico_tipoEspecifico(tipo, titulo):
         "ShellSort": "black"
     }
     
-    plt.figure(figsize=(5, 4))
+    plt.figure(figsize=(10,6))
     for algoritmo, df_algoritmo in dados.items():
         plt.plot(df_algoritmo["Tamanho"], df_algoritmo["Tempo"], color=cores_algoritmos[algoritmo], label=f"{algoritmo} {tipo}")
-    
-    plt.xlabel("Tamanho")
-    plt.ylabel("Tempo (s)")
-    plt.title(titulo)
+         # espalha valores pequenos
+
+    plt.xlabel('Tamanho')
+    plt.ylabel('Tempo (s)')
+    plt.title('Comparação de Algoritmos de Ordenação')
+    plt.ylim(0, 0.2)
     plt.legend()
-    plt.grid(True)
     plt.show()

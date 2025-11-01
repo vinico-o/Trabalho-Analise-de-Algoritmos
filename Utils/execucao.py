@@ -10,7 +10,8 @@ import Utils.registro as reg
 import time
 import random
 
-tamanhos = [100, 163, 268, 439, 719, 1178, 1930, 3162, 5179, 8483, 13894, 22758, 37275, 61054, 100000]
+tamanhos = range(1000, 21000, 1000)
+
 tipos = ["Crescente", "Decrescente", "Aleatorio"]
 funcoes = {
     "BubbleSort": bs.BubbleSort,
@@ -36,9 +37,22 @@ def ordenacao():
                     lista = random.sample(range(1, tamanho + 1), tamanho)
                 escreverArquivo(nome, funcao, tamanho, tipo, lista)
                 
-def escreverArquivo(nome, funcao, tamanho, tipo, lista):
-    inicio = time.time()
-    funcao(lista)
-    fim = time.time()
-    tempo = fim - inicio
-    reg.adicionarInformacoes(nome, tamanho, f"{tempo:.2f}", tipo)
+def escreverArquivo(nome, funcao, tamanho, tipo, lista_base):
+    soma = 0
+    for i in range(5):
+        
+        if tipo == "Crescente":
+            lista = list(range(1, tamanho + 1))
+        elif tipo == "Decrescente":
+            lista = list(range(tamanho + 1, 1, -1))
+        else:  
+            lista = random.sample(range(1, tamanho + 1), tamanho)
+        
+        inicio = time.time()
+        funcao(lista)
+        fim = time.time()
+        tempo = fim - inicio
+        soma += tempo
+
+    media = soma / 5
+    reg.adicionarInformacoes(nome, tamanho, f"{media}", tipo)
